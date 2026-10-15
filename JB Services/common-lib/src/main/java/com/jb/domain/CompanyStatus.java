@@ -1,0 +1,6 @@
+package com.jb.domain;
+
+public enum CompanyStatus {
+
+  PENDING_VERIFICATION, ACTIVE, SUSPENDED, REJECTED
+}

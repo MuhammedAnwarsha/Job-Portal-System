@@ -19,13 +19,13 @@ public interface CompanyService {
   List<CompanyResponse> getAllCompanies(CompanyType companyType, IndustryType industryType,
       CompanyStatus companyStatus);
 
-  CompanyResponse updateCompany(Long companyId);
+  CompanyResponse updateCompany(Long companyId, Long ownerId, CompanyRequest req) throws Exception;
 
-  CompanyResponse verifyCompany(Long companyId);
+  CompanyResponse verifyCompany(Long companyId) throws Exception;
 
-  void deleteCompany(Long companyId);
+  void deleteCompany(Long companyId, Long ownerId) throws Exception;
 
-  CompanyResponse deactivateCompany(Long companyId);
+  CompanyResponse deactivateCompany(Long companyId) throws Exception;
 
-  Company getCompanyEntityById(Long Id);
+  Company getCompanyEntityById(Long Id) throws Exception;
 }

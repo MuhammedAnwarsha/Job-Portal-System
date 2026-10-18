@@ -49,6 +49,8 @@ public class CompanyResponse {
 
   private CompanyStatus status;
 
+  private Boolean isVerified;
+
   private Boolean active;
 
   private Long ownerId;

@@ -2,6 +2,8 @@ package com.jb.cs.model;
 
 import com.jb.domain.SocialPlatform;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,6 +18,7 @@ import lombok.Setter;
 @Builder
 public class SocialLink {
 
+  @Enumerated(EnumType.STRING)
   private SocialPlatform platform;
 
   private String url;

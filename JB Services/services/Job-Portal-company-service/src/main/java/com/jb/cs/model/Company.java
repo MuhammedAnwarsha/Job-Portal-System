@@ -14,6 +14,7 @@ import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -71,13 +72,16 @@ public class Company {
   @Enumerated(EnumType.STRING)
   private CompanyStatus status;
 
+  private boolean isVerified = false;
+
   @Column(unique = true)
   private String registrationNumber;
 
   @Column(unique = true, nullable = false)
   private Long ownerId;
 
-  @ElementCollection
+  @ElementCollection(fetch = FetchType.EAGER)
+  @Builder.Default
   private List<SocialLink> socialLinks = new ArrayList<>();
 
   private Boolean active = true;

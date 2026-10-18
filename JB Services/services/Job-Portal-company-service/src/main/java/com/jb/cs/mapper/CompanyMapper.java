@@ -25,7 +25,8 @@ public class CompanyMapper {
         .slug(company.getSlug()).tagline(company.getTagline()).description(company.getDescription())
         .logoUrl(company.getLogoUrl()).coverImageUrl(company.getCoverImageUrl()).website(company.getWebsite())
         .email(company.getEmail()).phone(company.getPhone()).foundedYear(company.getFoundedYear()).companySize(company.getCompanySize())
-        .companyType(company.getCompanyType()).industryType(company.getIndustryType()).status(company.getStatus())
+        .companyType(company.getCompanyType()).industryType(company.getIndustryType())
+        .status(company.getStatus()).isVerified(company.isVerified())
         .active(company.getActive()).ownerId(company.getOwnerId()).socialLinks(socialLinks).createdAt(company.getCreatedAt())
         .updatedAt(company.getUpdatedAt())
         .build();
